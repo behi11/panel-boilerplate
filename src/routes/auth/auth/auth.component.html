@@ -1,0 +1,32 @@
+<main class="flex ai-c jc-c">
+    <section class="flex column">
+        <mat-form-field appearance="outline">
+            <mat-label>شماره موبایل</mat-label>
+            <input matInput type="tel" autocomplete="off" [disabled]="disabled || sent" placeholder="09"
+                [(ngModel)]="phone" (keyup.enter)="submit()">
+            <mat-icon matSuffix>call</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" *ngIf="sent == true">
+            <mat-label>کد تایید</mat-label>
+            <input matInput type="tel" autocomplete="off" [disabled]="disabled" [(ngModel)]="code"
+                (keyup.enter)="submit()">
+            <mat-icon matSuffix>vpn_key</mat-icon>
+        </mat-form-field>
+
+        <div class="button-container flex nowrap">
+            <button mat-button (click)="clear()" *ngIf="sent" >
+                <span>اصلاح</span>
+            </button>
+
+            <div class="space"></div>
+
+            <button mat-raised-button color="accent" [disabled]="disabled" (click)="submit()">
+                <div class="button-content" [ngClass]="{'disabled': disabled}">
+                    <span>ارسال کن</span>
+                    <mat-spinner color="accent" diameter="20"></mat-spinner>
+                </div>
+            </button>
+        </div>
+    </section>
+</main>

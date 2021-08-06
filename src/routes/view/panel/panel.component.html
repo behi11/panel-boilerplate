@@ -1,0 +1,32 @@
+<main class="flex column">
+    <mat-toolbar>
+        <span>{{AppTitle}}</span>
+
+        <div class="space"></div>
+
+        <button mat-raised-button (click)="logout()">
+            <mat-icon>logout</mat-icon>
+            <span>خروج از حساب کاربری</span>
+        </button>
+    </mat-toolbar>
+
+    <header>
+
+    </header>
+
+    <div class="container flex nowrap">
+
+        <section class="drawer flex column">
+            <a *ngFor="let item of drawerItems" mat-button [routerLink]="item.path"
+                [color]="path.includes(item.path) ? 'accent' : ''">
+                <mat-icon>{{item.icon}}</mat-icon>
+                <span>{{item.title}}</span>
+            </a>
+        </section>
+
+        <section class="view">
+            <router-outlet></router-outlet>
+        </section>
+
+    </div>
+</main>

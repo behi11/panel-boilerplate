@@ -1,0 +1,52 @@
+main {
+    width: 100vw;
+    height: 100vh;
+
+    section {
+        min-width: 350px;
+
+        input {
+            direction: ltr;
+            text-align: left;
+        }
+
+        mat-icon[matSuffix] {
+            margin-right: 8px;
+        }
+
+        div.button-container {
+            div.space {
+                flex: 1;
+            }
+
+            button {
+                min-height: 37px;
+
+                div.button-content {
+                    position: relative;
+
+                    mat-spinner {
+                        position: absolute;
+
+                        top: 50%;
+                        left: 50%;
+
+                        transform: translate(-50%, -50%);
+
+                        opacity: 0;
+                    }
+
+                    &.disabled {
+                        span {
+                            opacity: 0;
+                        }
+
+                        mat-spinner {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

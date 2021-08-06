@@ -1,0 +1,21 @@
+@import "./style/flex.scss";
+@import "./style/font.css";
+@import "./style/normalize.css";
+@import "./style/normalize.scss";
+@import "./style/theme.scss";
+@import "./style/root.css";
+
+* {
+  font-family: IRANSansX;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background-color);
+}

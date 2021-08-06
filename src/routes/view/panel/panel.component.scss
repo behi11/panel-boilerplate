@@ -1,0 +1,60 @@
+main {
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+
+    mat-toolbar {
+        background-color: transparent;
+        color: var(--header-text-color);
+
+        position: absolute;
+
+        div.space {
+            flex: 1;
+        }
+    }
+
+    header {
+        height: var(--header-height);
+
+    
+        background-color: var(--header-background-color);
+        color: var(--header-text-color);
+
+    }
+
+    div.container {
+        width: 90vw;
+
+        margin: 0 auto;
+
+        section {
+            &.drawer {
+                width: 300px;
+
+                padding-top: 30px;
+
+                margin-left: 50px;
+
+                a {
+                    text-align: right;
+                    height: 46px;
+                    line-height: 46px;
+
+                    mat-icon {
+                        margin-left: 12px;
+                    }
+                }
+            }
+
+            &.view {
+                position: relative;
+
+                top: -100px;
+
+                padding-bottom: 40vh;
+            }
+        }
+    }
+}
